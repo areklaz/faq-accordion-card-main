@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #333;
+}
+
+h2 {
+    padding: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.faq-box {
+    height: 460px;
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.img-area {
+    position: relative;
+    padding-top: 100px;
+}
+
+.img-area-desktop {
+    display: none;
+    position: relative;
+}
+
+img {
+    position: absolute;
+}
+
+.main-img {
+    top: -126px;
+}
+
+.img-shadow {
+    top: -10px;
+    left: 10px;
+    transform: scale(1.05)
+}
+
+.box-img {
+    display: none;
+    z-index: 2;
+}
+
+.question-box {
+    width: 100%;
+    max-height: 40px;
+    overflow: hidden;
+    font-size: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.question-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.answer {
+    padding: 10px 0;
+    overflow: hidden;
+    color: #555;
+}
+
+.active {
+    height: auto;
+    max-height: 150px;
+}
+
+.arrow {
+    pointer-events: none;
+    color: rgb(182, 119, 3);
+}
+
+@media(min-width: 1200px) {
+    .faq-box {
+        display: flex;
+        position: relative;
+        height: 500px;
+        width: 1000px;
+    }
+
+    .img-area {
+        display: none;
+    }
+
+    .img-area-desktop {
+        display: block;
+        left: -21px;
+        width: 50%;
+        overflow: hidden;
+    }
+
+    .img-area-desktop .main-img {
+        position: absolute;
+        top: 29px;
+        left: -77px;
+        transform: scale(1);
+        z-index: 1;
+    }
+
+    .img-area-desktop .img-shadow {
+        position: absolute;
+        top: -315px;
+        left: -525px;
+        transform: scale(.9);
+        z-index: 0;
+    }
+
+    .box-img {
+        display: block;
+        position: absolute;
+        top: 175px;
+        left: -94px;
+    }
+
+    .questions-area {
+        padding-top: 20px;
+        padding-right: 5%;
+        width: 50%;
+    }
+
+    .question-box {
+        min-height: 46px;
+        font-size: 16px;
+    }
+
+    .answer {
+        padding-bottom: 15px;
+    }
+
+    h2 {
+        text-align: left;
+        font-size: 2rem;
+        padding: 40px 0;
+    }
+
+    .question-btn {
+        min-height: 46px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .faq-box {
+        transform: scale(1.1)
+    }
+}
+
+@media (min-width: 1600px) {
+    .faq-box {
+        transform: scale(1.2)
+    }
+}
